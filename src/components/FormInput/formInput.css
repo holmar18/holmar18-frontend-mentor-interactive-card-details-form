@@ -1,0 +1,79 @@
+.forminput-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.forminput-label {
+	font-family: var(--font-family);
+	color: var(--color-very-dark-violet);
+	letter-spacing: 0.09rem;
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.forminput {
+	height: 2.5rem;
+	font-size: 1rem;
+	margin: 0.5rem 0 0.5rem;
+	border-radius: 0.3rem;
+	border: 0.11rem solid var(--color-light-grayish-violet);
+	font-family: var(--font-family);
+	padding-left: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.forminput::placeholder {
+	font-family: var(--font-family);
+	color: var(--color-light-grayish-violet);
+	letter-spacing: 0.09rem;
+	font-size: 1rem;
+	padding-left: 0.3rem;
+}
+
+.forminput:focus {
+	outline: none !important;
+	border: 0.11rem solid transparent;
+	border-radius: 0.3rem;
+	background-image: linear-gradient(white, white),
+		linear-gradient(
+			to right,
+			var(--input-active-border-from),
+			var(--input-active-border-to)
+		);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	padding: 0;
+}
+
+.forminput-errMsg {
+	font-family: var(--font-family);
+	color: var(--input-error-border);
+}
+
+.doubleInput-container {
+	display: flex;
+}
+
+.doubleInput-container input {
+	width: 40%;
+}
+
+.doubleInput-container input:nth-child(2) {
+	margin-left: 6%;
+}
+
+@media only screen and (max-width: 375px) {
+	.forminput-label {
+		font-size: 0.8rem;
+		margin-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 376px) {
+	.forminput-label {
+		font-size: 1rem;
+		margin-top: 1rem;
+	}
+}

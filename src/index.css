@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+	--input-active-border-from: hsl(249, 99%, 64%);
+	--input-active-border-to: hsl(278, 94%, 30%);
+
+	--input-error-border: hsl(0, 100%, 66%);
+
+	--color-white: hsl(0, 0%, 100%);
+	--color-light-grayish-violet: hsl(270, 3%, 87%);
+	--color-dark-grayish-violet: hsl(279, 6%, 55%);
+	--color-very-dark-violet: hsl(278, 68%, 11%);
+
+	--font-size: 1.1rem;
+	--font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+	margin: 0;
+	box-sizing: border-box;
+	font-size: var(--font-size);
+	font-family: var(--font-size);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}

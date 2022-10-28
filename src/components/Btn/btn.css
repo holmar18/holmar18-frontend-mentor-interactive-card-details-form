@@ -1,0 +1,20 @@
+.confirmation-btn {
+	width: 100%;
+	height: 3.3rem;
+	border-radius: 0.4rem;
+	border-width: 0;
+	background: var(--color-very-dark-violet);
+	color: var(--color-white);
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	margin-top: 1.5rem;
+}
+
+.confirmation-btn:active {
+	background: var(--color-dark-grayish-violet);
+	transition: all 0.2s ease;
+}
+
+.confirmation-btn:hover {
+	cursor: pointer;
+}
