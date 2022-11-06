@@ -1,5 +1,11 @@
 # Frontend Mentor - Interactive card details form
 
+##### Information
+
+**Insta** `npm install`
+**run** `npm run`
+**E2E tests** `npm run cypress:open`
+
 ---
 
 ### Links
