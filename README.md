@@ -2,8 +2,8 @@
 
 ##### Information
 
-**Insta** `npm install`
-**run** `npm run`
+**Install** `npm install` <br>
+**run** `npm run` <br>
 **E2E tests** `npm run cypress:open`
 
 ---
