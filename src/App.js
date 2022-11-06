@@ -1,8 +1,8 @@
 import './App.css';
-import { CardCheckScreen } from './screens/CardCheckScreen';
+import CardCheckout from './pages/CardCheckout';
 
 function App() {
-	return <CardCheckScreen />;
+	return <CardCheckout />;
 }
 
 export default App;

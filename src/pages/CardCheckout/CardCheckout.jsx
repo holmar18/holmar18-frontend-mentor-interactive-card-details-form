@@ -1,18 +1,18 @@
 import React from 'react';
-import './cardCheckScreen.css';
-// Icon
-import CardIcon from '../../images/card-logo.svg';
-import { BsCheckLg } from 'react-icons/bs';
+import './cardCheckout.css';
 // Const
 import Constants from '../../constants/constants';
 // Components
 import { FormInput } from '../../components/FormInput';
 import { DoubleFormInput } from '../../components/FormInput';
 import { Btn } from '../../components/Btn';
+import CardFront from './CardFront';
+import CardBack from './CardBack';
+import Submited from './Submited';
 // hooks
 import { useCardFormLogic } from '../../hooks/useCardFormLogic';
 
-const CardCheckScreen = () => {
+const CardCheckout = () => {
 	const {
 		values,
 		setFuncs,
@@ -27,22 +27,8 @@ const CardCheckScreen = () => {
 	return (
 		<div className='main-container'>
 			<section className='cards-container'>
-				<div className='card-front'>
-					<img src={CardIcon} alt={'Card icon'} className='card-icon' />
-					<div className='card-number'>
-						{values.cardNr ? values.cardNr : '0000 0000 0000 0000'}
-					</div>
-					<span className='card-name'>
-						{values.name ? values.name : 'Jane Appleesed'}
-					</span>
-					<span className='card-expire'>
-						{values.monthValid ? values.monthValid : '00'}/
-						{values.yearValid ? values.yearValid : '00'}
-					</span>
-				</div>
-				<div className='card-back'>
-					<span className='back-number'>{values.cvc ? values.cvc : '000'}</span>
-				</div>
+				<CardFront values={values} />
+				<CardBack cvc={values.cvc} />
 			</section>
 			<section className='inputs-container'>
 				{!submited ? (
@@ -108,26 +94,13 @@ const CardCheckScreen = () => {
 						<Btn submit={submit} text={Constants.btns.conf} />
 					</>
 				) : (
-					<>
-						<section className='submitMsg-container'>
-							<div className='submitMsg-text-container'>
-								<div className='submit-circle'>
-									<BsCheckLg />
-								</div>
-								<div>
-									<h1>{Constants.submited.thanks}</h1>
-								</div>
-								<div>
-									<p>{Constants.submited.ad}</p>
-								</div>
-							</div>
-							<Btn submit={submit} text={Constants.btns.cont} />
-						</section>
-					</>
+					<section className='submitMsg-container'>
+						<Submited submit={submit} />
+					</section>
 				)}
 			</section>
 		</div>
 	);
 };
 
-export default CardCheckScreen;
+export default CardCheckout;
